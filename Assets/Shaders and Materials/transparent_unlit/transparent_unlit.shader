@@ -6,24 +6,25 @@
     }
 
     SubShader {
-		Tags {"Queue"="Transparent"}
+        Tags {"Queue"="Transparent"}
 
-		Blend SrcAlpha OneMinusSrcAlpha
+        Blend SrcAlpha OneMinusSrcAlpha
         Lighting On
         Material {
             Emission [_Color]
         }
 
-		// Render back-facing faces
+        // Render back-facing faces
         Pass {
-			Cull Front
+            Cull Front
             SetTexture [_MainTex] {
                 Combine texture * primary
             }
         }
-		// Render front-facing faces
+
+        // Render front-facing faces
         Pass {
-			Cull Back
+            Cull Back
             SetTexture [_MainTex] {
                 Combine texture * primary
             }

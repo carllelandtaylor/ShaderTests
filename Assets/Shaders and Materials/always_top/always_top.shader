@@ -6,7 +6,7 @@
 
     SubShader {
         Pass {
-			ZTest Always
+            ZTest Always
             SetTexture [_MainTex]
         }
     }
