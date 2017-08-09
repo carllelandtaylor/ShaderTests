@@ -10,6 +10,7 @@
             Material {
                 Emission [_Color]
             }
+            Lighting On
             SetTexture [_MainTex] {
                 Combine texture * primary
             }
